@@ -1,4 +1,4 @@
-use crate::{Organ, Blood};
+use crate::{Blood, Organ};
 
 pub struct Marrow;
 

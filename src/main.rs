@@ -2,16 +2,15 @@ mod blood;
 mod organ;
 
 mod adipose;
-mod marrow;
 mod liver;
+mod marrow;
 
 use blood::Blood;
 use organ::Organ;
 
 use adipose::Adipose;
-use marrow::Marrow;
 use liver::Liver;
-
+use marrow::Marrow;
 
 fn main() {
     let mut marrow = Marrow;
@@ -23,7 +22,3 @@ fn main() {
     let blood = adipose.circulate(blood);
     println!("new_blood is {:?}", blood);
 }
-
-
-
-

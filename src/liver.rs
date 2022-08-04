@@ -1,8 +1,7 @@
-use crate::Organ;
 use crate::Blood;
+use crate::Organ;
 
-pub struct Liver {
-}
+pub struct Liver {}
 
 impl Liver {
     const CONSUME_RATE: f32 = 4.0;
@@ -25,14 +24,14 @@ mod tests {
     use crate::*;
     #[test]
     fn circulate_blood_in_liver() {
-        let mut liver = Liver{};
+        let mut liver = Liver {};
         let blood = Blood {
             sugar: 25.0,
             glucagon: 1.0,
-            insulin: 5.0
+            insulin: 5.0,
         };
         let blood = liver.circulate(blood);
- 
+
         assert_eq!(blood.sugar, 21.0);
         assert_eq!(blood.glucagon, 0.8);
         assert_eq!(blood.insulin, 4.0);
