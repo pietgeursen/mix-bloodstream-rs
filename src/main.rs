@@ -1,12 +1,16 @@
 mod blood;
-mod adipose;
-mod marrow;
 mod organ;
 
+mod adipose;
+mod marrow;
+mod liver;
+
 use blood::Blood;
+use organ::Organ;
+
 use adipose::Adipose;
 use marrow::Marrow;
-use organ::Organ;
+use liver::Liver;
 
 
 fn main() {
