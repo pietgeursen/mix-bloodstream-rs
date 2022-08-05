@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Blood {
     pub sugar: f32,
     pub glucagon: f32,
