@@ -10,16 +10,13 @@ mod organs;
 use organs::{Adipose, Liver, Marrow};
 
 fn main() {
-    let mut marrow = Marrow;
-    let mut adipose = Adipose::new(1000.0);
-    let blood = Blood::default();
+    let mut body = Body::new(
+        Adipose::new(1000.0),
+        Liver {},
+        Marrow {}
+    );
 
-    let blood = marrow.circulate(blood);
-    println!("new_blood is {:?}", blood);
-    let blood = adipose.circulate(blood);
-    println!("new_blood is {:?}", blood);
+    body.pump();
 
-    //
-    // Body ([Organ, Organ])
-    //
+    println!("my body working! {:?}", body.sugar())
 }
